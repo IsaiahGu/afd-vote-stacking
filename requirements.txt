@@ -1,0 +1,11 @@
+numpy
+pandas
+pyarrow
+scipy
+statsmodels
+torch
+transformers
+openai
+requests
+scikit-learn
+accelerate
