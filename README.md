@@ -1,7 +1,7 @@
 # Counting Heads or Weighing Arguments?
 **A Vote-Stacking Stress Test for LLM Discussion Closers**
 
-Research code for the PAKDD 2027 manuscript on English Wikipedia Articles for Deletion. Each pair contains a discussion whose closer went against the recounted majority and a matched discussion whose closer followed it. The stress test inserts votes into the discussion shown to the model and measures movement toward the injected side.
+Each pair contains a discussion whose closer went against the recounted majority and a matched discussion whose closer followed it. The stress test inserts votes into the discussion shown to the model and measures movement toward the injected side.
 
 ## Inspect the paper results
 
@@ -36,3 +36,4 @@ PAIRS=combined python src/supp_analyze.py local
 ```
 
 Per-discussion predictions are saved to `results/supp_*.parquet`. The final command writes `results/supp_tables_combined.json`. Repeat inference for each closer and pass the aliases together to the analysis. `supp_variants.py` defines bare votes, shortcut citations, neutral comments and the masking and filtering defenses. `baselines_v2.py` trains count-based and encoder baselines. Its encoder modes require local checkpoints in `models/roberta-base` or `models/ettin-encoder-400m` and a CUDA GPU.
+
